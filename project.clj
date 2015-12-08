@@ -1,29 +1,19 @@
 (defproject devdev "0.1.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://example.com/FIXME"
+  :description "devdev livecoding"
+  :url "github.com/niquola"
   :license {:name "Eclipse Public License"
             :url "http://www.eclipse.org/legal/epl-v10.html"}
 
   :dependencies [[org.clojure/clojure "1.7.0"]
-                 [ring-server "0.4.0"]
-                 [reagent "0.5.1" :exclusions [org.clojure/tools.reader]]
+                 [reagent "0.5.1"]
                  [ring "1.4.0"]
                  [ring/ring-defaults "0.1.5"]
-                 [compojure "1.4.0"]
-                 [hiccup "1.0.5"]
-                 [org.clojure/clojurescript "1.7.170" :scope "provided"]
-                 [http-kit "2.2.0-SNAPSHOT"]
-                 [hiccup "1.0.5"]
-                 [route-map "0.0.2"]
-                 [cheshire "5.5.0"]]
+                 [org.clojure/clojurescript "1.7.170" :scope "provided"]]
 
   :plugins [[lein-cljsbuild "1.1.1"]]
 
-  :clean-targets ^{:protect false} [:target-path
-                                    [:cljsbuild :builds :app :compiler :output-dir]
-                                    [:cljsbuild :builds :app :compiler :output-to]]
-
   :source-paths ["src/clj" "src/cljc"]
+
   :resource-paths ["resources" "target/cljsbuild"]
 
   :cljsbuild {:builds {:app {:source-paths ["src/cljs" "src/cljc"]
