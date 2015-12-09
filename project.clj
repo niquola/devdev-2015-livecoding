@@ -23,8 +23,7 @@
                                         :optimizations :none
                                         :pretty-print  true}}}}
 
-  :profiles {:dev {:repl-options {:init-ns devdev.repl}
-                   :dependencies [[lein-figwheel "0.5.0-2"]
+  :profiles {:dev {:dependencies [[lein-figwheel "0.5.0-2"]
                                   [org.clojure/tools.nrepl "0.2.12"]
                                   [com.cemerick/piggieback "0.2.1"]]
 
