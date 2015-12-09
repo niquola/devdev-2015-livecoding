@@ -21,6 +21,8 @@ What is functional programming?
 
 What is REPL?
 
+nrepl - ???
+
 IDE:
 
 * emacs + cider
@@ -62,3 +64,4 @@ IDE:
 
 2.
     start at 12:25
+    end 13:09
